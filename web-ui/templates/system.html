@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Status</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            padding: 20px;
+        }
+        .card {
+            background-color: #2e2e2e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px #000;
+        }
+        .btn {
+            background-color: #3e8e41;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #367636;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 System Status</h1>
+    <form method="get">
+        <button type="submit" class="btn">Refresh</button>
+    </form>
+    <div class="card">
+        <p><strong>CPU Usage:</strong> {{ cpu_percent }}%</p>
+        <p><strong>RAM Usage:</strong> {{ ram_used }} MB / {{ ram_total }} MB</p>
+        <p><strong>System Temperature:</strong> {{ temperature }} °C</p>
+        <p><strong>Uptime:</strong> {{ uptime }} seconds</p>
+        <p><strong>System:</strong> {{ system }} {{ release }}</p>
+    </div>
+    <a href="{{ url_for('home') }}">
+        <button class="btn">⬅️ Back</button>
+    </a>
+</body>
+</html>
