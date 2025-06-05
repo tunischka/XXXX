@@ -1,0 +1,15 @@
+[Unit]
+Description=Flipper Clone Flask Web UI
+After=network.target
+
+[Service]
+User=tunag
+WorkingDirectory=/home/tunag/XXXX/web-ui
+ExecStart=/usr/bin/python3 /home/tunag/XXXX/web-ui/app.py
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

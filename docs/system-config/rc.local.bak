@@ -1,0 +1,3 @@
+#!/bin/bash
+bash /home/tunag/XXXX/scripts/monitor-always.sh &
+exit 0
